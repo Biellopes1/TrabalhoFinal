@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/cadastroProduto.html">Cadastro de Produtos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/ListarProdutos">Relatorio</a>
+        </li>
+    </ul>
+    <br />
+    <h3 style="text-align: center;">Pagina de Cadastro </h3>
+    <br />
+    <div class="container" style="border: solid 2px; padding: 15px;">
+        <form method="POST" action="/cadastroProduto" class="row g-3 needs-validation" novalidate>
+            <legend>Cadastrar Produto:</legend>
+            <div class="col-md-4">
+                <label for="versao" class="form-label">Versão:</label>
+                <input type="text" class="form-control" id="versao" name="versao" required>
+            </div>
+            <div class="col-md-4">
+                <label for="marca" class="form-label">Marca:</label>
+                <input type="text" class="form-control" id="marca" name="marca" required>
+            </div>
+            <div class="col-md-4">
+                <label for="custo." class="form-label">Custo</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">R$</span>
+                    <input type="number" class="form-control" id="custo" name="custo" min="0" step="0.01" required>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="produto" class="form-label">produto</label>
+                <select class="form-select" id="produto" name="produto" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="Eletronicos">Mouse</option>
+                    <option value="Eletronicos">Teclado</option>
+                    <option value="Eletronicos">Celular</option>
+                    <option value="Eletronicos">Notebook</option>
+                    <option value="Eletronicos">Carregador de Celular</option>
+                    <option value="Eletronicos">fone de ouvido</option>
+
+                </select>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+                <a class="btn btn-secondary" href="/">Voltar</a>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</html>

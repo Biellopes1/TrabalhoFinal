@@ -1,0 +1,29 @@
+{
+  "name": "aula3ppiadssemi-1",
+  "version": "1.0.0",
+  "description": "WEB APP HTTP",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biellopes1/Aula3PPIADSSemi.git"
+  },
+  "keywords": [
+    "HTTP",
+    "POST",
+    "validação"
+  ],
+  "author": "Gabriel Lopes Matias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Biellopes1/Aula3PPIADSSemi/issues"
+  },
+  "homepage": "https://github.com/Biellopes1/Aula3PPIADSSemi#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
