@@ -42,7 +42,7 @@ function autenticarUsuario(requisicao, resposta) {
     const senha = requisicao.body.senha;
     if ((usuario === 'Gabriel' && senha === '12345') || (usuario === 'Renato' && senha === '13579')) {
         requisicao.session.usuarioAutenticado = true;
-        requisicao.session.ultimoAcesso = new Date();
+        requisicao.session.ultimoAcesso = new Date().toLocaleDateString();;
         resposta.cookie('ultimoAcesso', requisicao.session.ultimoAcesso.toString());
         resposta.redirect('/');
     } else {
@@ -58,8 +58,8 @@ app.get('/logout', (req, resp) => {
 });
 
 app.get('/', autenticar, (requisicao, resposta) => {
-    const ultimoAcesso = requisicao.cookies.ultimoAcesso || 'Primeiro acesso';
-    resposta.send(`
+    const ultimoAcesso = requisicao.cookies.ultimoAcesso;
+    resposta.write(`
         <!DOCTYPE html>
         <html lang="pt-br">
         <head>
